@@ -304,6 +304,8 @@ header {
   }
 }
 
+
+
 @media only screen and (max-width: 945px) {
   .search-params {
     width: 95%;
