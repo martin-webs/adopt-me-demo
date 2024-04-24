@@ -38,6 +38,7 @@ const SearchParams = () => {
       <div className="search-params">
         <form
           onSubmit={(e) => {
+            console.log(theme.bgColor);
             e.preventDefault();
             requestPets();
           }}

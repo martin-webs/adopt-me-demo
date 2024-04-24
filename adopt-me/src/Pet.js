@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom'; 
+import ThemeContext from './ThemeContext';
 
 const Pet = ({name, animal, breed ,images, id, location}) => {
+
+  const theme = useContext(ThemeContext);
 
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
   if (images.length && images.length !== ' ') {
@@ -13,7 +17,7 @@ const Pet = ({name, animal, breed ,images, id, location}) => {
         <img src={hero} alt={name} />
       </div>
       <div className="info">
-        <h1>{name}</h1>
+        <div style={{fontSize: '1.6rem'}}>{name}</div>
         <h2>{animal} - {breed} - {location}</h2>
       </div>
     </Link>

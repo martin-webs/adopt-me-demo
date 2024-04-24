@@ -1,7 +1,7 @@
 # Adopt Me
 (Based on the Frontend Masters course: "Intro to React - v7". I am including what most caught my attention, and certain concepts that I feel are crucial to understand React.)
 
-## Bare bones React
+### Bare bones React
 Add the following script tags to the end of the body
 
 ```bash
@@ -482,15 +482,15 @@ React Router's API only exposes hooks. If you have a class component that is a r
 he constructor is annoying. We can use something called class properties to make it a lot nicer and easier to read. Class properties are a new part of JavaScript so we need Parcel transform the code when Parcel transpiles our code. Luckily our config will do that by itself so no further changes are needed (previously we did need to.)
 
 Parcel will merge this config with what it has already, so we just need to pull in the one Babel plugin we need.
-
+```bash
 npm i -D @babel/plugin-proposal-class-properties@7.16.7
-
+```
 Now make a file called .babelrc with the following:
-
+```bash
 {
   "plugins": ["@babel/plugin-proposal-class-properties"]
 }
-
+```
 Babel's core concept is a plugin. Every one sort of a transformation it can perform is encapsulated into a plugin. Here we're including one explicitly: class properties.
 
 Now with this, we can modify Details to be as so:
